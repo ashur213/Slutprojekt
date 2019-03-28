@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <?php
+		include("Templates/nav.php")
+	?>
 </head>
 
 <body>

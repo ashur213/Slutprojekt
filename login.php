@@ -1,4 +1,5 @@
 <?php
+
 // ALLTID STARTA SESSION I BÖRJAN
 session_start();
 // KOLLA OM MAN VILL LOGGA IN
