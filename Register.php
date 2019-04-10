@@ -17,6 +17,7 @@ if( isset($_POST['name']) &&  isset($_POST['mail']) &&
     // OM FRÅGAN GÅTT BRA
     if(mysqli_query($dbc_form,$query)){
         // SKICKAS TILL INDEX
+        $_SESSION['register_msg'] = "Du är nu registrerad";
         header("Location: index.php");
     }else{ // NÅGOT GICK FEL
         
@@ -26,6 +27,7 @@ if( isset($_POST['name']) &&  isset($_POST['mail']) &&
 }
 else{ // FELAKTIG DATA FRÅN $_POST
     $_SESSION['error_msg'] = "Felaktig information";
+    $_SESSION['register_msg'] = "Felaktig information";
     header("Location: index.php");
 }
 ?>

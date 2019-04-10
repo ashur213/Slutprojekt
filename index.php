@@ -33,7 +33,10 @@
         if($_SESSION['login'] == "INLOGGAD"){
             $show_form = false; // VISA INTE FORMULÄREN
             echo "Välkommen   ".$_SESSION['name'] . " du är inloggad!"; // VISA VÄLKOMSTTEXT
+      
+            
             ?>
+    
 
             <!-- Utloggningsformulär -->
             <form action="logout.php">
@@ -52,6 +55,9 @@
             Adress: <input type="text" name="address"><br>
             Lösenord: <input type="password" name="password">
             <input type="submit">
+            
+            
+        
 
     </form>
 </body>
@@ -59,7 +65,7 @@
    <form action="login.php" method="POST">
    <h1>Login:</h1>
     <br>Mail: <input type="email" name="mail"><br>
-    Lösenord: <input type="pass" name="password">
+    Lösenord: <input type="password" name="password">
        <input type="submit"> 
     </form>
 </body>

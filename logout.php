@@ -1,4 +1,4 @@
-<?php
+    <?php
 // ALLTID STARTA SESSION I BÖRJAN
 session_start();
 // TA BORT INLOGGNINGEN
