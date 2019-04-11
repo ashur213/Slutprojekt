@@ -1,6 +1,66 @@
-<link rel="stylesheet" href="style.css">
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <?php
 		include("Templates/nav.php")
+	?>
+</head>
+
+<body>
+   <?php
+    session_start();
+    // ANVÄNDS FÖR ATT VISA FORMULÄREN I SLUTET ELLER INTE
+    $show_form = true;
+    
+    // OM DET FINNS ERROR MESSAGE
+    if(isset($_SESSION['error_msg'])){
+        // Skriv ut error_msg
+        echo $_SESSION['error_msg'] . "<br>";
+       
+        // TA BORT ERROR_MSG
+        unset($_SESSION['error_msg']);
+    }
+    
+    // KOLLA OM MAN HAR BESÖKT SIDAN FÖRUT
+    if(isset($_SESSION['login'])){
+        // har besökt sidan
+        
+        // OM MAN ÄR INLOGGAD
+        if($_SESSION['login'] == "INLOGGAD"){
+            $show_form = false; // VISA INTE FORMULÄREN
+            echo "Välkommen   ".$_SESSION['name'] . " du är inloggad!"; // VISA VÄLKOMSTTEXT
+      
+            
+            ?>
+    
+
+            <!-- Utloggningsformulär -->
+            <form action="logout.php">
+                <input type="submit" value="Logga ut">
+            </form>
+
+            <?php
+        }
+    }    
 ?>
-<h1>om ni vill boka så kan ni logga in eller ringa oss. </h1>
-<p>031 692 420</p>
+       <h1>Boka bord:</h1> <br>
+        <form action="bokning.php" method="POST">
+
+            Namn: <input type="text" name="name"><br>
+            datum: <input type="date" name="date"><br>
+            tid: <input type="time" name="time"><br>
+            personer: <input type="number" name="people">
+            <input type="submit">
+            
+            
+        
+
+    </form>
+</body>
+<body>
+
+</body>
+</html>
