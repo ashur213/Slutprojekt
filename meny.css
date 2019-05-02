@@ -11,8 +11,16 @@
     margin:0px;
 }
 
-.dish_container img{
+
+.img_container{
     float:left;
+    width:40%;
+    height:100%;
+}
+
+.img_container img{
+    width:100%;
+    height:100%;
 }
 
 .info_container{
@@ -21,42 +29,53 @@
     height:100%;
 }
 
+.name{
+    width:100%;
+    height:20%;
+    background-color: red;
+    text-align: center;
+}
+
+.name p{
+    font-size: 25px;
+}
+
 .price{
     width:100%;
-    height:30%;
+    height:20%;
     text-align: center;
-    background-color: red
+    background-color: red;
 }
 
 .price p{
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
 }
 
 
-.split{
-    height:70%;
+.desc_container{
+    height:60%;
     width:100%;
 }
 
-.info{
-    height:100%;
-    width:70%;
+.desc{
     float:left;
-    padding:10px;
-}
-
-.info .name{
-    font-size: 25px;
-    font-weight: bold;    
-}
-
-.info .info_text{
-    margin-top: 15px;
-}
-
-.spicy{
-    float:left;
+    width:55%;
     height:100%;
-    width:30%;
+    padding-left:5%;
 }
+
+.desc p{
+    
+}
+
+.side_info{
+    float:left;
+    width:40%;
+    height:100%;
+}
+
+.milk,.gluten,.nuts,spicy{
+    height:25%;
+    width:100%;
+}
+
