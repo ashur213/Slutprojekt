@@ -41,17 +41,38 @@ while($row = mysqli_fetch_array($result)){
                     <p><?php echo $row["info"]; ?></p>
                 </div>
                 <div class="side_info">
-                    <div class="milk">
-                        <p><?php echo $row["mjölk"]; ?></p>                
+                    <div class="milk">  
+                        <?php for($i = 0; $i< $row["mjölk"]; $i++){
+        ?>
+                        			<img src="bilder\mjölk.png" id="milk" height="22px" />
+                        <?php
+        
+    } ?>     
                     </div>
                     <div class="gluten">
-                        <p><?php echo $row["gluten"]; ?></p>                
+                        <?php for($i = 0; $i< $row["gluten"]; $i++){
+                          ?>
+                        			<img src="bilder\gluten.png" id="gluten" height="22px" />
+                        <?php
+        
+    } ?>          
                     </div>
                     <div class="nuts">
-                        <p><?php echo $row["nötter"]; ?></p>                
+                        <?php for($i = 0; $i< $row["nötter"]; $i++){
+                          ?>
+                        			<img src="bilder\nuts.png" id="nuts" height="22px" />
+                        <?php
+        
+    } ?>     
                     </div>
                     <div class="spicy">
-                        <p><?php echo $row["styrka"]; ?></p>                
+                        <?php for($i = 0; $i< $row["styrka"]; $i++){
+        ?>
+                        			<img src="bilder\chili.png" id="chili" height="20px" />
+
+                        <?php
+        
+    } ?>                
                     </div>
                 </div>
             </div>

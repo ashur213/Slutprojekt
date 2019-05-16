@@ -1,14 +1,14 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <?php
-		include("Templates/nav.php")
-	?>
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+        <?php
+            include("Templates/nav.php")
+        ?>
+    </head>
 
 <body>
    <?php

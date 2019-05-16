@@ -13,7 +13,7 @@
    <?php
     session_start();
     // ANVÄNDS FÖR ATT VISA FORMULÄREN I SLUTET ELLER INTE
-    $show_form = true;
+    $show_form = true ;
     
     // OM DET FINNS ERROR MESSAGE
     if(isset($_SESSION['error_msg'])){
