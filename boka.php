@@ -46,17 +46,22 @@
         }
     }    
 ?>
-       <h1>Boka bord:</h1> <br>
-        <form action="bokning.php" method="POST">
-
-            Namn: <input type="text" name="name"><br>
-            datum: <input type="date" name="date"><br>
-            tid: <input type="time" name="time"><br>
-            personer: <input type="number" name="people">
-            <input type="submit">
-            
-            
-        
+<div class="booking">
+        <div class="booking-title">
+            <h1>Boka Bord</h1>
+        </div>
+        <div class="booking-form">
+            <p>Namn</p>
+            <input type="text" name="name" placeholder="Namn">
+            <p>Datum</p>
+            <input type="date" name="date">
+            <p>Tid</p>
+            <input type="time" name="time">
+            <p>Personer</p>
+            <input type="number" name="people" placeholder="Antal Personer"><br>
+            <input type="submit" name="" value="Boka" >
+        </div>
+    </div>
 
     </form>
 </body>
