@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+    -- phpMyAdmin SQL Dump
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 25 apr 2019 kl 09:21
+-- Tid vid skapande: 16 maj 2019 kl 08:50
 -- Serverversion: 10.1.19-MariaDB
 -- PHP-version: 7.0.13
 
@@ -42,7 +42,13 @@ INSERT INTO `boka` (`id`, `name`, `datum`, `tid`, `personer`) VALUES
 (1, 'ashur', '2019-04-04', '23:23', '1'),
 (2, 'thomas', '2019-04-10', '05:30', '325'),
 (3, 'thomas', '2019-04-10', '05:30', '325'),
-(13, 'musa', '2019-04-11', '13:30', '8');
+(13, 'musa', '2019-04-11', '13:30', '8'),
+(14, 'micho', '2019-05-04', '21:00', '5'),
+(15, 'Hussein', '2019-05-24', '05:30', '35'),
+(16, 'hussein', '2017-09-28', '20:00', '356'),
+(17, 'KEn', '', '', ''),
+(18, 'ken', '2018-09-13', '22:30', '200'),
+(19, 'Filip bson', '19999-05-14', '01:00', '500');
 
 -- --------------------------------------------------------
 
@@ -58,22 +64,23 @@ CREATE TABLE `meny` (
   `gluten` int(11) NOT NULL,
   `nötter` int(11) NOT NULL,
   `mjölk` int(11) NOT NULL,
-  `namn` varchar(32) NOT NULL
+  `namn` varchar(32) NOT NULL,
+  `info` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumpning av Data i tabell `meny`
 --
 
-INSERT INTO `meny` (`id`, `bild`, `pris`, `styrka`, `gluten`, `nötter`, `mjölk`, `namn`) VALUES
-(1, 'pad1.jpg', 100, 2, 1, 0, 0, 'pad nam'),
-(2, 'pad2.jpg', 125, 2, 1, 1, 1, 'Pad nam prik'),
-(3, 'pad3.jpg', 75, 1, 0, 0, 0, 'prik pao'),
-(4, 'pad4.jpg', 50, 3, 1, 1, 0, 'Pad hot'),
-(5, 'pad5.jpg', 75, 0, 1, 1, 1, 'Chicken teriyaki'),
-(6, 'pad6.jpg', 69, 0, 0, 0, 0, 'Chicken mix'),
-(7, 'pad7.jpg', 50, 1, 1, 1, 1, 'Chicken masala'),
-(8, 'pad8.jpg', 500, 3, 1, 1, 1, 'HOT CHICKEN WINGUSU');
+INSERT INTO `meny` (`id`, `bild`, `pris`, `styrka`, `gluten`, `nötter`, `mjölk`, `namn`, `info`) VALUES
+(1, 'bilder/pad1.jpg', 100, 2, 1, 0, 0, 'pad nam', 'Jätte gott mycket bra'),
+(2, 'bilder/pad2.jpg', 125, 2, 1, 1, 1, 'Pad nam prik', 'Bra för hälsan'),
+(3, 'bilder/pad3.jpg', 75, 1, 0, 0, 0, 'prik pao', 'gott som godis'),
+(4, 'bilder/pad4.jpg', 50, 3, 1, 1, 0, 'Pad hot', 'Jätte gott'),
+(5, 'bilder/pad5.jpg', 75, 1, 1, 1, 1, 'Chicken teriyaki', 'gott'),
+(6, 'bilder/pad6.jpg', 69, 4, 0, 0, 0, 'Chicken mix', 'Eld '),
+(7, 'bilder/pad7.jpg', 50, 1, 1, 1, 1, 'Chicken masala', 'Dunder'),
+(8, 'bilder/pad8.jpg', 500, 3, 1, 1, 1, 'HOT CHICKEN WINGUSU', 'Good meal');
 
 -- --------------------------------------------------------
 
@@ -107,7 +114,9 @@ INSERT INTO `register` (`id`, `name`, `mail`, `address`, `pass`) VALUES
 (11, 'ashur', 'ashduaisd@live.se', 'asdad', 'asd123'),
 (12, 'ashur', 'ashuad@live.se', 'ashur', 'ashur123'),
 (13, 'ken', 'kent@live.se', 'kentgatan42', 'ken123'),
-(14, 'abed', 'abed@live.se', 'abedgatan', 'abed123');
+(14, 'abed', 'abed@live.se', 'abedgatan', 'abed123'),
+(15, 'hussein', 'hussein@live.se', 'nÃ¤verlursgatan 24', 'hussein123'),
+(16, 'johan', 'johan@live.se', 'johangatan12', 'johan123');
 
 --
 -- Index för dumpade tabeller
@@ -140,7 +149,7 @@ ALTER TABLE `register`
 -- AUTO_INCREMENT för tabell `boka`
 --
 ALTER TABLE `boka`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT för tabell `meny`
 --
@@ -150,7 +159,7 @@ ALTER TABLE `meny`
 -- AUTO_INCREMENT för tabell `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
