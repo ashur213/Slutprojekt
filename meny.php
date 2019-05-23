@@ -1,9 +1,14 @@
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="meny.css">
-<?php
-		include("Templates/nav.php")
-?> 
+<!doctype html>
 
+<html>
+    <head> 
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="meny.css">
+        <?php
+                include("Templates/nav.php")
+        ?> 
+    </head>
+    <body>
 <section>
   
     <?php
@@ -91,4 +96,5 @@ while($row = mysqli_fetch_array($result)){
 
 
 </section>
-
+    </body>
+</html>  

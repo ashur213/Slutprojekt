@@ -1,17 +1,35 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <?php
 		include("Templates/nav.php")
 	?>
 </head>
 
-  Name: <input type="text" name="usrname">
+<body>   <?php
+$dbc = mysqli_connect("localhost","root","","thai");
+$query = "SELECT * FROM recension"
 
-  <input type="submit">
-</form>
+;?>
 
-<textarea name="comment" form="usrform">Skriv recension här</textarea>
+    
+       <form action="recensiondb.php" method="POST">
+        
+    <form action="recension.php" method="POST">
+    Namn:<br> <input class="namn" type="text" name="namn"><br>
+    recension:<br><input size="40px" class="namn"type="text" name="kommentar">
+    <input type="submit">
+            
+            
+            
+        
+
+    </form>
+</body>
+<body>
+
+</body>
+</html>

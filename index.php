@@ -1,5 +1,5 @@
 
-    <!DOCTYPE html>
+    
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -60,8 +60,7 @@
         
 
     </form>
-</body>
-<body>
+
    <form action="login.php" method="POST">
    <h1>Login:</h1>
     <br>Mail: <input type="email" name="mail"><br>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="meny.css">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <?php
 		include("Templates/nav.php")
@@ -46,14 +46,14 @@
         }
     }    
 ?>
-       <h1>Boka bord:</h1> <br>
-        <form action="bokning.php" method="POST">
+     <section><h1 class="bokabord">BOKA BORD</h1>
+        <form class="boka" action="bokning.php" method="POST">
 
             Namn: <input type="text" name="name"><br>
             datum: <input type="date" name="date"><br>
             tid: <input type="time" name="time"><br>
             personer: <input type="number" name="people">
-            <input type="submit">
+            <input type="submit"> </section>
             
             
         
