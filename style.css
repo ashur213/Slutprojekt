@@ -34,3 +34,48 @@ body{
 
 
 }
+/* NIMAS */
+
+.booking {
+    background: rgba(255,255,0,0.3);
+    width: 300px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    margin-left: 790px;
+    margin-top: 130px;
+}
+ 
+.booking-title {
+    text-align: center;
+}
+ 
+.booking-form {
+    text-align: center;
+}
+ 
+.booking-form p{
+    font-weight: bold;
+ 
+}
+ 
+.booking-form input[type=text],input[type=number],input[type=time],input[type=date] {
+    width: 200px;
+    height: 25px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+ 
+.booking-form input[type=submit] {
+    width: 150px;
+    height: 20px;
+    margin-top: 10px;
+    background: white;
+    border-radius: 10px;
+    border:1px solid black;
+}
+ 
+.booking-form input[type=submit]:hover {
+    background: #999;
+    cursor: pointer;
+}
