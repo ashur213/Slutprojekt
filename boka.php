@@ -46,14 +46,33 @@
         }
     }    
 ?>
-     <section><h1 class="bokabord">BOKA BORD</h1>
+<!--      <section><h1 class="bokabord">BOKA BORD</h1>
         <form class="boka" action="bokning.php" method="POST">
 
             Namn: <input type="text" name="name"><br>
             datum: <input type="date" name="date"><br>
             tid: <input type="time" name="time"><br>
             personer: <input type="number" name="people">
-            <input type="submit"> </section>
+            <input type="submit"> </section> -->
+
+	<div class="booking">
+        <div class="booking-title">
+            <h1>Boka Bord</h1>
+        </div>
+        <div class="booking-form">
+        	<form action="bokning.php" method="POST">
+        		            <p>Namn</p>
+            <input type="text" name="name" placeholder="Namn">
+            <p>Datum</p>
+            <input type="date" name="date">
+            <p>Tid</p>
+            <input type="time" name="time">
+            <p>Personer</p>
+            <input type="number" name="people" placeholder="Antal Personer"><br>
+            <input type="submit" name="" value="Boka" >
+        	</form>
+        </div>
+    </div>
             
             
         
